@@ -1,4 +1,5 @@
-import { Professional } from "./professional";
+import { Professional } from "../../../professional";
+
 export class Movie{
     public title:string;
     public realeseYear:number;
@@ -60,7 +61,3 @@ export class Movie{
 
     }
 }
-
-
-// let pelicula1:Movie = new Movie("Escape Room",2019,"Estadounidense","Terror/Suspense");
-// pelicula1.printMovie()
