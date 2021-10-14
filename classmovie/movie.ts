@@ -28,24 +28,16 @@ export class Movie{
         if(this.isMCU){
             pertenece = "Si"
         }
-        fullMovie += `Titulo: ${this.title} \n
-        Año de estreno: ${this.realeseYear}\n
-        Actores que participan en la pelicula:` ;
+        fullMovie += `Titulo: ${this.title} \nAño de estreno: ${this.realeseYear}\nActores que participan en la pelicula: \n` ;
 
         for(let actor of this.actors){
-            fullMovie +=`${actor.name}\n` 
+            fullMovie +=`   ${actor.name}\n` 
          }
 
         fullMovie += `Nacionalidad:  ${this.nationality}\n`;
-        fullMovie += `Director:  ${this.director}\n
-        Guionista:  ${this.writer}\n`;
-        fullMovie+=`Doblage original:  ${this.language}\n
-        Plataforma:  ${this.plataform}\n
-        Pertenece al universo cinematografico marvel?:  ${pertenece}\n
-        Personaje principal:  ${this.mainCharacterName}\n
-        Productor: ${this.producer}\n
-        Distribuidor: ${this.distributor}\n
-        Genero: ${this.genere}`;
+        fullMovie += `Director:  ${this.director.name}\nGuionista:  ${this.writer.name}\n`;
+        fullMovie+=`Doblage original:  ${this.language}\nPlataforma:  ${this.plataform}\nPertenece al universo cinematografico marvel?:  ${pertenece}\nPersonaje principal:  ${this.mainCharacterName}\nProductor: ${this.producer}\nDistribuidor: ${this.distributor}\nGenero: ${this.genere}`;
 
+        console.log(fullMovie);
     }
 }
