@@ -1,4 +1,4 @@
-import { Professional } from "../../../professional";
+import { Professional } from '../classProfessional/Professional';
 
 export class Movie{
     public title:string;
