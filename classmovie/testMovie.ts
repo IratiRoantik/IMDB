@@ -1,4 +1,4 @@
-import { Professional } from '../../../professional';
+import { Professional } from '../classProfessional/Professional';
 import { Movie } from './movie';
 
 let profesional1:Professional = new Professional ("Irati",29,"female",80,1.80, "blond", "green", "asian", false, "vietnamese", 12, "actress" );
