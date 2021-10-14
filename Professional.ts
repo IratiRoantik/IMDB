@@ -1,4 +1,3 @@
-# IMDB
 class Professional{
     public name :string;
     public age: number;
