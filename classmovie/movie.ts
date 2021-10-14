@@ -33,19 +33,7 @@ export class Movie{
         Actores que participan en la pelicula:` ;
 
         for(let actor of this.actors){
-            let retirado:string = "No";
-            if(actor.isRetired){
-                retirado = "Si";
-            }
-            fullMovie +=`Nombre ${actor.name}\n
-            Edad: ${actor.age}\n
-            Genero: ${actor.genre}\n
-            Peso (Kg): ${actor.weight}\n
-            Altura(cm): ${actor.height}\n
-            Color de pelo: ${actor.hairColor}\n
-            Color de ojos: ${actor.eyeColor}\n
-            Raza: ${actor.race}\n
-            ` 
+            fullMovie +=`${actor.name}\n` 
          }
 
         fullMovie += `Nacionalidad:  ${this.nationality}\n`;
