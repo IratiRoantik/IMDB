@@ -1,6 +1,7 @@
 import { Imdb } from "./Imdb";
 import { Movie } from '../classmovie/movie';
 import { Professional } from "../classProfessional/Professional";
+import * as fs  from "file-system"
 
 
 let profesional1:Professional = new Professional ("Irati",29,"female",80,1.80, "blond", "green", "asian", false, "vietnamese", 12, "actress" );
@@ -38,3 +39,7 @@ let peliculas:Imdb = new Imdb (pelis);
 console.log(peliculas);
 
 peliculas.Movie[0].printMovie();
+
+
+let objectToJson = JSON.stringify(peliculas);
+fs.writeFileSync("peliculas.json", objectToJson);
