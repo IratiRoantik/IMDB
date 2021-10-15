@@ -35,7 +35,7 @@ pelicula2.distributor= "hbo";
 //pelicula2.printMovie();
 let pelis:Movie[] = [ pelicula1, pelicula2]
 let peliculas:Imdb = new Imdb (pelis);
-//console.log(peliculas);
+console.log(peliculas);
 
 //peliculas.Movie[0].printMovie();
 
