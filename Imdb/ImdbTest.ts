@@ -1,7 +1,7 @@
 import { Imdb } from "./Imdb";
 import { Movie } from '../classmovie/movie';
 import { Professional } from "../classProfessional/Professional";
-
+import * as fs from "file-system";
 
 let profesional1:Professional = new Professional ("Irati",29,"female",80,1.80, "blond", "green", "asian", false, "vietnamese", 12, "actress" );
 let profesional2:Professional = new Professional ("Dani",25,"male",75,1.60, "brown", "blue", "african", false, "senegalese", 0, "director" );
@@ -20,7 +20,7 @@ pelicula1.language = "Inlgés";
 pelicula1.producer = "Netflix";
 pelicula1.distributor= "Netflix";
 
-pelicula1.printMovie();
+//pelicula1.printMovie();
 
 let pelicula2: Movie = new Movie("Harry Potter",1999,"Estadounidense","Magia");
 pelicula2.actors = actores;
@@ -32,9 +32,19 @@ pelicula2.language = "Inlgés";
 pelicula2.producer = "hbo";
 pelicula2.distributor= "hbo";
 
-pelicula2.printMovie();
+//pelicula2.printMovie();
 let pelis:Movie[] = [ pelicula1, pelicula2]
 let peliculas:Imdb = new Imdb (pelis);
-console.log(peliculas);
+//console.log(peliculas);
 
-peliculas.Movie[0].printMovie();
+//peliculas.Movie[0].printMovie();
+
+
+let objetoAJson = JSON.stringify(peliculas)
+
+fs.writeFileSync("imdbBBDD.json", JSON.stringify(peliculas));
+let datos = fs.readFileSync("./imdbBBDD.json", {encoding:"utf8"})
+let objectIMDB = JSON.parse(datos);
+
+console.log(objectIMDB);
+
